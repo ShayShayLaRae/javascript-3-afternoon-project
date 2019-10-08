@@ -20,7 +20,10 @@ var carDetails = {
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
-
+let color= carDetails.color;
+let make= carDetails.make;
+let model= carDetails.model;
+let year= carDetails.year;
 //Code Here
 
 
@@ -35,7 +38,9 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let firstName= obj.firstName;
+  let lastName= obj.lastName;
+  let title= obj.title;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -47,12 +52,21 @@ function greeting( obj ) {
 
 /*
   Write a function called totalPopulation that will take in an object.
+
   That object will have 4 properties named utah, california, texas and arizona.
   The property values will be numbers.
+
   Use object destructuring to save the property values to new variables.
+
   Sum up the values and return the total number.
 */
-
+function totalPopulation (states){
+  let utah= states.utah;
+  let california= states.california;
+  let texas= states.texas;
+  let arizona= states.arizona;
+  return utah + california + texas + arizona;
+}
 //Code Here
 
 
@@ -61,12 +75,22 @@ function greeting( obj ) {
 
 /*
   Write a function called ingredients that will take in an object. 
+
   This object will have 3 properties named carb, fat, and protein. 
+
   The property values will be strings. 
+
   Use object destructuring to save the property values to new variables. 
+
   Push these new variables to an array and return the array. 
 */
 
+function ingredients(obj){
+let carb= obj.carb;
+let fat= obj.fat;
+let protein= obj.protein;
+return [carb, fat, protein];
+}
 //Code Here
 
 
@@ -85,8 +109,11 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
 
+//Code Here
+function largeNumbers({first, second, third}){
+return Math.min(...[first, second, third]);
+}
 
 
 ////////// PROBLEM 6 //////////
