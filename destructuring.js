@@ -85,6 +85,12 @@ function totalPopulation (states){
   Push these new variables to an array and return the array. 
 */
 
+// function ingredients(obj){
+// let carb= obj.carb;
+// let fat= obj.fat;
+// let protein= obj.protein;
+// return [carb, fat, protein];
+// }
 function ingredients(obj){
 let carb= obj.carb;
 let fat= obj.fat;

@@ -16,12 +16,28 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
   Use the filter method on mixedNumbers to make a new array of just the even numbers.
 
   The filter function takes a callback with the parameters
-  function(element, index, wholeArray){}  Function Form
-  (element, index, wholeArray)=>{}    Arrow Form
+  function(element, index, wholeArray){}  Function Form   //drop "function"
+  (element, index, wholeArray)=>{}    Arrow Form          //add an arrow "=>"
+  ()=>{} //Arrow function without parameters
 */
 
 //Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+//Higher order functions are passed like parameters - that's it
+//It's just a function that is being passed as a parameter for later use
+function myCustomFilter(element, index, wholeArray){
+    if (element % 2 === 0){
+      return element;
+    }
+}
+
+let evenNumbers = mixedNumbers.filter(myCustomFilter);
+
+//This is the same! Except I'm writing the function inside the filter() parenthesis!
+// let evenNumbers = mixedNumbers.filter((element, index, wholeArray)=>{
+//     if (element % 2 === 0){
+//       return element;
+//     }
+// });
 
 
 

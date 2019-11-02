@@ -1,4 +1,10 @@
 /*
+BOBBY'S NOTES
+- Nesting is just stuff inside of stuff, like objects inside of objects, loops inside of loops
+- Could also be arrays inside of objects, or objects inside of arrays, etc.
+*/
+
+/*
   Once you complete a problem, refresh ./nesting.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
@@ -51,7 +57,21 @@ var employees = [
 */
 
 //Code Here
+function employeeUpdater(){
+  let updatedEmployees= [];
+  for (let i=0; i< employees.length; i++){
+    let employee=employees[i];
+    if (employee.firstName==="Theo"){
 
+    } else {
+      if(employee.firstName==="Lorie"){
+        employee.department= "HR";
+      }
+      updatedEmployees.push(employee);
+    }
+  }
+  return updatedEmployees;
+}
 
 
 ////////// PROBLEM 2 //////////

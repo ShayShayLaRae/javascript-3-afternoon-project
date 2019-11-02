@@ -11,15 +11,15 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
+// for(var key in values) { //instead of using "i" as a counting variable for the index, they refer to properties themselves
 //   console.log(values[key])
 // }
 
@@ -40,7 +40,13 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+ //Code Here
+ let myAnswer= "";
+ for (let key in obj){
+   let myValue=obj[key];
+   myAnswer+=myValue;
+ }
+return myAnswer;
 }
 
 
@@ -54,7 +60,16 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+//We use bracket notation to access property values when we don't know the name of the properties. If we knew the name of the property, we could use dot notation to access it.
+function greaterThan10 (obj){
+  for(let key in obj){
+    let myValue=obj[key]; 
+    if(myValue>10){
+        obj[key]= 0;
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +81,13 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double (obj){
+  for (let key in obj){
+    let myValue=obj[key];
+    obj[key]= myValue*2;
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
